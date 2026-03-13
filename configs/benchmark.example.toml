@@ -1,0 +1,45 @@
+# Experimental Playwright config.
+# The main project workflow now uses the in-page metrics JSON exporter instead.
+[benchmark]
+base_url = "http://127.0.0.1:8000"
+output_root = "data/raw"
+manifest_path = "data/manifests/run_manifest.jsonl"
+post_load_wait_ms = 1200
+trace_enabled = true
+repetitions = 5
+cache_states = ["cold", "warm"]
+network_profiles = ["baseline", "latency100ms", "bandwidth512kbps", "latency100ms-bandwidth512kbps"]
+
+[browsers.firefox]
+enabled = true
+headless = false
+# On NixOS, consider setting this to your system Firefox path after validating
+# that Playwright can drive it on your machine.
+# executable_path = "/run/current-system/sw/bin/firefox"
+
+[browsers.chromium]
+enabled = false
+headless = false
+
+[browsers.chrome]
+enabled = false
+channel = "chrome"
+headless = false
+
+[browsers.webkit]
+enabled = false
+headless = false
+
+[browsers.brave]
+enabled = false
+headless = false
+executable_path = "/path/to/brave"
+
+[scenarios.minimal]
+path = "/minimal/index.html"
+
+[scenarios.moderate]
+path = "/moderate/index.html"
+
+[scenarios.heavy]
+path = "/heavy/index.html"

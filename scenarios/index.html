@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrowserBench Scenarios</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, serif;
+        color: #15212b;
+        background:
+          radial-gradient(circle at top left, rgba(11, 114, 133, 0.22), transparent 32%),
+          radial-gradient(circle at bottom right, rgba(196, 69, 54, 0.16), transparent 30%),
+          #f8f4e8;
+      }
+      main {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 3rem 1.25rem 4rem;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      }
+      a.card {
+        display: block;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.8);
+        color: inherit;
+        text-decoration: none;
+        border: 1px solid rgba(17, 32, 49, 0.12);
+      }
+      code { font-family: ui-monospace, monospace; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>BrowserBench</p>
+      <h1>Shared test scenarios</h1>
+      <p>Open one scenario, wait for the page to settle, then use the built-in metrics panel to download a JSON result for that run.</p>
+      <div class="grid">
+        <a class="card" href="/minimal/index.html">
+          <strong>Minimal</strong>
+          <p>Small page profile, intended to stay below 500 KB.</p>
+        </a>
+        <a class="card" href="/moderate/index.html">
+          <strong>Moderate</strong>
+          <p>Mixed assets around the 1.5 MB class.</p>
+        </a>
+        <a class="card" href="/heavy/index.html">
+          <strong>Heavy</strong>
+          <p>Large page profile with a 5 MB+ style resource mix.</p>
+        </a>
+      </div>
+      <p>Suggested folder for downloaded JSON files: <code>data/manual/collected/</code></p>
+    </main>
+  </body>
+</html>

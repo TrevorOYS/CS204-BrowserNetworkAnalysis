@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrowserBench Moderate</title>
+    <link rel="stylesheet" href="/generated/style.css?kb=24&variant=moderate-core">
+    <link rel="stylesheet" href="/generated/style.css?kb=24&variant=moderate-extra">
+    <script defer src="/generated/script.js?kb=36&variant=moderate-core"></script>
+    <script defer src="/generated/script.js?kb=36&variant=moderate-extra"></script>
+    <script defer src="/shared/metrics.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Palatino Linotype", Georgia, serif;
+        background: #f8f4e8;
+        color: #18242d;
+      }
+      main {
+        margin: 0 auto;
+        max-width: 72rem;
+        padding: 2rem 1.25rem 4rem;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.76);
+        border: 1px solid rgba(17, 32, 49, 0.12);
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+      .card img {
+        display: block;
+        width: 100%;
+      }
+      .card div {
+        padding: 0.9rem;
+      }
+    </style>
+  </head>
+  <body data-scenario="moderate">
+    <main>
+      <h1>Moderate page profile</h1>
+      <p>Mixed asset types and multiple subresources targeting the ~1.5 MB class from the paper.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="/generated/image.svg?kb=240&variant=moderate-a&color=%23c44536" alt="Generated artwork A">
+          <div data-script-target="moderate-core">moderate-core</div>
+        </article>
+        <article class="card">
+          <img src="/generated/image.svg?kb=240&variant=moderate-b&color=%230b7285" alt="Generated artwork B">
+          <div data-script-target="moderate-extra">moderate-extra</div>
+        </article>
+        <article class="card">
+          <img src="/generated/image.svg?kb=240&variant=moderate-c&color=%23b08968" alt="Generated artwork C">
+          <div id="json-slot">loading data</div>
+        </article>
+      </div>
+    </main>
+    <script>
+      Promise.all([
+        fetch("/generated/data.json?kb=180&variant=moderate-a").then((response) => response.json()),
+        fetch("/generated/data.json?kb=180&variant=moderate-b").then((response) => response.json()),
+        fetch("/generated/data.json?kb=180&variant=moderate-c").then((response) => response.json())
+      ]).then((payloads) => {
+        const total = payloads.reduce((sum, payload) => sum + payload.items.length, 0);
+        document.getElementById("json-slot").textContent = `Fetched ${total} generated items.`;
+      });
+    </script>
+  </body>
+</html>

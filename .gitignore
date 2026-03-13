@@ -1,3 +1,9 @@
-har_files/
+.venv/
+__pycache__/
+*.pyc
+browserbench.egg-info/
+data/raw/
+data/derived/
+data/manifests/
+data/manual/collected/
 output_metrics/
-.DS_Store

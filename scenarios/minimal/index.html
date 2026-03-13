@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrowserBench Minimal</title>
+    <link rel="stylesheet" href="/generated/style.css?kb=8&variant=minimal">
+    <script defer src="/generated/script.js?kb=12&variant=minimal"></script>
+    <script defer src="/shared/metrics.js"></script>
+    <style>
+      body {
+        font-family: Georgia, serif;
+        margin: 0;
+        color: #112031;
+      }
+      main {
+        margin: 0 auto;
+        max-width: 56rem;
+        padding: 3rem 1.5rem 4rem;
+      }
+      .hero {
+        display: grid;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      img {
+        border-radius: 1rem;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body data-scenario="minimal">
+    <main>
+      <section class="hero">
+        <div>
+          <p>Scenario</p>
+          <h1>Minimal page profile</h1>
+          <p>Designed to stay below 500 KB while still creating a realistic CSS, JS, image, and JSON request mix.</p>
+          <p data-script-target="minimal">script:not-yet-loaded</p>
+        </div>
+        <img src="/generated/image.svg?kb=96&variant=minimal-hero&color=%230b7285" alt="Minimal scenario hero image">
+      </section>
+    </main>
+    <script>
+      fetch("/generated/data.json?kb=48&variant=minimal")
+        .then((response) => response.json())
+        .then((payload) => {
+          const p = document.createElement("p");
+          p.textContent = `Fetched ${payload.items.length} generated values.`;
+          document.querySelector("main").appendChild(p);
+        });
+    </script>
+  </body>
+</html>

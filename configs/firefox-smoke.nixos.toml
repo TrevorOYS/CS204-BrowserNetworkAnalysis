@@ -1,0 +1,21 @@
+# Experimental Playwright smoke config for NixOS.
+# The main project workflow now uses manual page-metrics JSON export instead.
+[benchmark]
+base_url = "http://127.0.0.1:8000"
+output_root = "data/raw"
+manifest_path = "data/manifests/firefox-smoke.jsonl"
+post_load_wait_ms = 1200
+trace_enabled = true
+repetitions = 1
+cache_states = ["cold"]
+network_profiles = ["baseline"]
+
+[browsers.firefox]
+enabled = true
+headless = true
+# If Playwright cannot find or drive Firefox correctly on your machine,
+# uncomment and replace this with the result of `which firefox`.
+# executable_path = "/run/current-system/sw/bin/firefox"
+
+[scenarios.minimal]
+path = "/minimal/index.html"

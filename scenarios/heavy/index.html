@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrowserBench Heavy</title>
+    <link rel="stylesheet" href="/generated/style.css?kb=64&variant=heavy-core">
+    <link rel="stylesheet" href="/generated/style.css?kb=64&variant=heavy-grid">
+    <script defer src="/generated/script.js?kb=96&variant=heavy-core"></script>
+    <script defer src="/generated/script.js?kb=96&variant=heavy-extra"></script>
+    <script defer src="/shared/metrics.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Georgia, serif;
+        color: #111827;
+        background:
+          radial-gradient(circle at top left, rgba(11, 114, 133, 0.22), transparent 35%),
+          radial-gradient(circle at top right, rgba(196, 69, 54, 0.2), transparent 30%),
+          #f6f1e8;
+      }
+      main {
+        margin: 0 auto;
+        max-width: 84rem;
+        padding: 2rem 1.25rem 5rem;
+      }
+      .gallery {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      }
+      figure {
+        margin: 0;
+        background: rgba(255, 255, 255, 0.74);
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+      figure img {
+        display: block;
+        width: 100%;
+        min-height: 16rem;
+      }
+      figcaption {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body data-scenario="heavy">
+    <main>
+      <header>
+        <p>Scenario</p>
+        <h1>Heavy page profile</h1>
+        <p>Targets a 5 MB+ local page load using repeated large SVG assets, multiple scripts, CSS, and several generated JSON fetches.</p>
+      </header>
+      <section class="gallery">
+        <figure>
+          <img src="/generated/image.svg?kb=640&variant=heavy-a&color=%230b7285" alt="Heavy scene A">
+          <figcaption data-script-target="heavy-core">heavy-core</figcaption>
+        </figure>
+        <figure>
+          <img src="/generated/image.svg?kb=640&variant=heavy-b&color=%23b08968" alt="Heavy scene B">
+          <figcaption data-script-target="heavy-extra">heavy-extra</figcaption>
+        </figure>
+        <figure>
+          <img src="/generated/image.svg?kb=640&variant=heavy-c&color=%23c44536" alt="Heavy scene C">
+          <figcaption id="json-heavy-slot">loading data</figcaption>
+        </figure>
+        <figure>
+          <img src="/generated/image.svg?kb=640&variant=heavy-d&color=%234b5563" alt="Heavy scene D">
+          <figcaption>generated image D</figcaption>
+        </figure>
+      </section>
+    </main>
+    <script>
+      const payloads = [
+        "/generated/data.json?kb=512&variant=heavy-a",
+        "/generated/data.json?kb=512&variant=heavy-b",
+        "/generated/data.json?kb=512&variant=heavy-c",
+        "/generated/data.json?kb=512&variant=heavy-d"
+      ];
+
+      Promise.all(payloads.map((url) => fetch(url).then((response) => response.json())))
+        .then((items) => {
+          const total = items.reduce((sum, payload) => sum + payload.items.length, 0);
+          document.getElementById("json-heavy-slot").textContent = `Fetched ${total} generated items across ${items.length} JSON responses.`;
+        });
+    </script>
+  </body>
+</html>
