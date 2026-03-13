@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520">
+  <rect width="1100" height="520" rx="28" fill="#0d1f31"/>
+  <g stroke="rgba(181,214,255,0.12)" fill="none">
+    <path d="M115 132c92-74 264-74 360 8s252 94 392-6"/>
+    <path d="M148 244c106-32 190-22 296 34s243 52 400-28"/>
+    <path d="M156 370c125 36 247 44 372-8s246-64 378 24"/>
+  </g>
+  <g fill="#49a3ff">
+    <circle cx="138" cy="132" r="10"/>
+    <circle cx="316" cy="102" r="10"/>
+    <circle cx="524" cy="160" r="10"/>
+    <circle cx="770" cy="142" r="10"/>
+    <circle cx="912" cy="118" r="10"/>
+    <circle cx="204" cy="250" r="10"/>
+    <circle cx="436" cy="282" r="10"/>
+    <circle cx="644" cy="238" r="10"/>
+    <circle cx="890" cy="230" r="10"/>
+  </g>
+  <g fill="#63ead5">
+    <circle cx="188" cy="388" r="10"/>
+    <circle cx="388" cy="416" r="10"/>
+    <circle cx="600" cy="372" r="10"/>
+    <circle cx="846" cy="396" r="10"/>
+  </g>
+  <g fill="#eaf6ff" font-family="Arial, sans-serif" font-size="20">
+    <text x="114" y="110">San Jose</text>
+    <text x="286" y="80">Tokyo</text>
+    <text x="500" y="138">Singapore</text>
+    <text x="736" y="120">Frankfurt</text>
+    <text x="872" y="96">London</text>
+    <text x="168" y="228">Sydney</text>
+    <text x="404" y="260">Mumbai</text>
+    <text x="610" y="216">Johannesburg</text>
+    <text x="850" y="208">São Paulo</text>
+    <text x="148" y="366">Seattle</text>
+    <text x="356" y="394">Toronto</text>
+    <text x="568" y="350">Paris</text>
+    <text x="816" y="374">Dubai</text>
+  </g>
+</svg>

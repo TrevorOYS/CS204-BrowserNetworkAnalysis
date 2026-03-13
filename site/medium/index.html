@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Architecture and Network Behavior</title>
+    <link rel="stylesheet" href="/medium/medium.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="/">Benchmarkpedia</a>
+      <form class="searchbox" role="search">
+        <label class="sr-only" for="page-search">Search</label>
+        <input id="page-search" type="search" value="Browser architecture" />
+      </form>
+    </header>
+
+    <main class="page">
+      <nav class="toc" aria-label="Contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#history">Historical development</a></li>
+          <li><a href="#network-stack">Network stack</a></li>
+          <li><a href="#rendering">Rendering pipeline</a></li>
+          <li><a href="#privacy">Privacy and security</a></li>
+          <li><a href="#measurement">Measurement notes</a></li>
+          <li><a href="#references">References</a></li>
+        </ol>
+      </nav>
+
+      <article class="content">
+        <header class="article-header">
+          <h1>Browser architecture and network behavior</h1>
+          <p class="subtitle">
+            From connection setup to rendering, modern browsers split work
+            across multiple components that influence perceived performance.
+          </p>
+        </header>
+
+        <aside class="infobox">
+          <h2>Summary</h2>
+          <img
+            src="/medium/assets/browser-architecture.svg"
+            alt="Simplified diagram showing browser UI, network stack, and renderer."
+            width="320"
+            height="220"
+          />
+          <table>
+            <tbody>
+              <tr><th scope="row">Type</th><td>System software</td></tr>
+              <tr><th scope="row">Key subsystems</th><td>UI, network stack, renderer, storage</td></tr>
+              <tr><th scope="row">Common metrics</th><td>DNS, connect, TTFB, page load, bytes</td></tr>
+              <tr><th scope="row">Benchmark use</th><td>Performance and stability comparison</td></tr>
+            </tbody>
+          </table>
+        </aside>
+
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>
+            A web browser retrieves documents, negotiates network connections,
+            manages caches, executes client-side scripts, and translates markup
+            into interactive pages. Although the task appears simple to users,
+            the internal path from URL entry to rendered content involves many
+            steps. Domain resolution, transport setup, encrypted session
+            negotiation, request dispatch, parsing, layout, script execution,
+            and repaint scheduling all contribute to the final loading
+            experience.
+          </p>
+          <p>
+            Performance differences between browsers can therefore come from more
+            than raw download speed. Scheduling policies, cache heuristics,
+            connection reuse, prioritization of resources, and script
+            optimizations all shape what users see and how quickly they can
+            interact with content. For local network experiments, reducing
+            outside variability helps isolate those browser decisions.
+          </p>
+        </section>
+
+        <section id="history">
+          <h2>Historical development</h2>
+          <p>
+            Early browsers combined user interface code, networking, and
+            rendering into a small monolithic process. As pages became more
+            complex and security expectations rose, browser vendors separated
+            privileged tasks from untrusted web content. Multiple processes now
+            help contain crashes, reduce privilege, and support sandboxing.
+          </p>
+          <p>
+            The shift toward stronger process isolation changed the performance
+            story as well. Browser engines must coordinate with GPU services,
+            cookie stores, network services, extension systems, and site
+            isolation mechanisms. The overhead is usually justified by security
+            benefits, but it can slightly affect startup cost, memory use, and
+            resource scheduling.
+          </p>
+          <p>
+            Browser competition also led to extensive work on speculative
+            preconnect, DNS prediction, compressed transfer formats, and smarter
+            handling of fonts, images, and script bundles. This means the same
+            page can exhibit noticeably different timing breakdowns depending on
+            the browser and on whether the visit is cold or warm.
+          </p>
+        </section>
+
+        <section id="network-stack">
+          <h2>Network stack</h2>
+          <p>
+            The network stack is responsible for translating a user request into
+            a sequence of network operations. A typical navigation begins with a
+            DNS lookup, followed by a TCP or QUIC handshake, optional TLS
+            negotiation, and then the exchange of HTTP requests and responses.
+            Connection pooling can allow later requests to skip some of these
+            costs when a suitable connection already exists.
+          </p>
+          <p>
+            During page load, browsers issue many requests in parallel. They
+            prioritize some resources earlier than others because a stylesheet,
+            script, or hero image can block visible progress. This prioritization
+            affects both total page load time and the timing of critical events
+            such as first contentful rendering or the completion of the load
+            event captured in a HAR file.
+          </p>
+          <p>
+            Browser vendors also differ in how aggressively they retry failed
+            requests, coalesce connections, reuse DNS answers, or attempt early
+            negotiation for secure connections. On a stable local network those
+            choices can still appear in metrics such as TTFB, average fetch
+            duration, and the total number of requests that complete before the
+            page reaches the final load event.
+          </p>
+        </section>
+
+        <section id="rendering">
+          <h2>Rendering pipeline</h2>
+          <p>
+            Rendering begins when the browser receives the main HTML document.
+            The parser constructs a document tree while the preload scanner
+            discovers additional resources. CSS is parsed into style rules, and
+            scripts may pause or reshape the parsing process depending on how
+            they are declared. Layout transforms structured content into boxes,
+            while painting and compositing turn those boxes into pixels.
+          </p>
+          <p>
+            Even when network conditions are identical, differences in parser
+            implementation, event scheduling, script optimization, and image
+            decoding can produce measurable divergence in `onContentLoad` and
+            `onLoad` timings. Heavy pages emphasize these differences because
+            they include more styles, more script tasks, and more resources
+            competing for bandwidth and CPU time.
+          </p>
+          <p>
+            The medium fixture in this repository intentionally remains
+            text-heavy. It approximates an encyclopedia page, where layout is
+            richer than the light fixture but script execution remains limited.
+            This creates a useful midpoint between a plain informational page and
+            a large product landing page.
+          </p>
+        </section>
+
+        <section id="privacy">
+          <h2>Privacy and security</h2>
+          <p>
+            Security features can influence performance in subtle ways. Site
+            isolation, tracking protection, anti-fingerprinting defenses, and
+            content blocking may suppress some requests or change timing
+            behavior. In privacy-focused browsers, these features are not bugs
+            but product choices. A fair benchmark should therefore document
+            default settings and explain whether the goal is raw speed or the
+            balance between performance and protection.
+          </p>
+          <p>
+            For example, a browser may intentionally delay or randomize certain
+            operations to reduce fingerprinting. Another may block third-party
+            scripts or images that would otherwise increase request counts and
+            bytes transferred. This is especially important when interpreting
+            results from a browser with stronger privacy defaults than the rest
+            of the test group.
+          </p>
+        </section>
+
+        <section id="measurement">
+          <h2>Measurement notes</h2>
+          <p>
+            A local benchmark page should avoid external dependencies so that
+            each browser sees the same asset set. Each run should start from a
+            known cache state, the network profile should remain fixed for the
+            duration of the run, and background tabs or synchronization activity
+            should be minimized. Exported HAR files then provide a compact view
+            of request timing, byte counts, error rates, and overall page load
+            behavior.
+          </p>
+          <p>
+            Repeating each combination of browser, page class, and network
+            condition helps reveal variance. Medians are often more informative
+            than means when occasional outliers appear. Standard deviation is
+            still helpful for communicating consistency, especially when
+            presenting results to an audience that expects evidence rather than
+            anecdotes.
+          </p>
+        </section>
+
+        <section id="references">
+          <h2>References</h2>
+          <ol class="references">
+            <li>Networking standards for DNS, TCP, TLS, and HTTP.</li>
+            <li>Browser engine documentation covering parsing and rendering.</li>
+            <li>Public browser security architecture overviews.</li>
+            <li>Benchmark methodology notes from the project repository.</li>
+          </ol>
+        </section>
+      </article>
+    </main>
+  </body>
+  </html>

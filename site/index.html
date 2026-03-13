@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Benchmark Fixtures</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="landing-shell">
+      <header class="landing-header">
+        <p class="eyebrow">CS204 Browser Benchmark</p>
+        <h1>Local Test Fixtures</h1>
+        <p class="lede">
+          Three fully local pages designed for repeatable browser-network
+          benchmarking: light, medium, and heavy.
+        </p>
+      </header>
+
+      <section class="card-grid" aria-label="Fixture pages">
+        <a class="fixture-card" href="/light/">
+          <span class="fixture-tag">Light</span>
+          <h2>Example-style</h2>
+          <p>Minimal document, low request count, almost no script work.</p>
+        </a>
+
+        <a class="fixture-card" href="/medium/">
+          <span class="fixture-tag">Medium</span>
+          <h2>Wikipedia-style</h2>
+          <p>
+            Text-heavy article layout with navigation, tables, references, and
+            a local figure.
+          </p>
+        </a>
+
+        <a class="fixture-card" href="/heavy/">
+          <span class="fixture-tag">Heavy</span>
+          <h2>Cloud platform-style</h2>
+          <p>
+            Marketing landing page with multiple stylesheets, scripts, images,
+            and local JSON data fetches.
+          </p>
+        </a>
+      </section>
+    </main>
+  </body>
+  </html>

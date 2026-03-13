@@ -1,0 +1,17 @@
+[
+  {
+    "region": "Singapore edge",
+    "summary": "Traffic remained stable during a synthetic launch window with high cache hit rates and narrow latency spread.",
+    "metric": "29 ms median"
+  },
+  {
+    "region": "Frankfurt edge",
+    "summary": "TLS setup overhead dropped after connection reuse, keeping application requests within a tight operating band.",
+    "metric": "0.3% error rate"
+  },
+  {
+    "region": "São Paulo edge",
+    "summary": "Burst traffic increased total bytes transferred, but prioritization preserved asset delivery for the landing view.",
+    "metric": "4.1 GB delivered"
+  }
+]

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EdgeMesh Platform</title>
+    <meta
+      name="description"
+      content="A locally hosted heavy landing page fixture for browser benchmark testing."
+    />
+    <link rel="stylesheet" href="/heavy/base.css" />
+    <link rel="stylesheet" href="/heavy/sections.css" />
+    <script defer src="/heavy/hero.js"></script>
+    <script defer src="/heavy/dashboard.js"></script>
+    <script defer src="/heavy/pricing.js"></script>
+    <script defer src="/heavy/timeline.js"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="masthead">
+        <a class="brand" href="/">
+          <img src="/heavy/assets/logo-shield.svg" alt="" width="30" height="30" />
+          <span>EdgeMesh</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#platform">Platform</a>
+          <a href="#network">Network</a>
+          <a href="#customers">Customers</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#docs">Docs</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="ghost" href="#docs">Contact sales</a>
+          <a class="solid" href="#pricing">Start free</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Connectivity without waiting</p>
+            <h1>Build a faster edge network for applications, APIs, and media.</h1>
+            <p class="hero-text">
+              Route traffic, terminate secure sessions, distribute static
+              content, and inspect performance from one globally distributed
+              control plane. This page is intentionally asset-heavy and
+              script-driven for repeatable local browser tests.
+            </p>
+            <div class="cta-row">
+              <a class="solid" href="#pricing">Start free</a>
+              <a class="ghost" href="#network">See the network</a>
+            </div>
+            <ul class="hero-points">
+              <li>Global cache and routing orchestration</li>
+              <li>Security policies close to users</li>
+              <li>Observability across regions and origins</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Platform illustration">
+            <img
+              class="hero-grid"
+              src="/heavy/assets/hero-grid.svg"
+              alt=""
+              width="720"
+              height="540"
+            />
+            <div id="metric-strip" class="metric-strip" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="logo-band" aria-label="Capabilities">
+          <img src="/heavy/assets/logo-edge.svg" alt="Edge routing" width="132" height="40" />
+          <img src="/heavy/assets/logo-workers.svg" alt="Workers" width="132" height="40" />
+          <img src="/heavy/assets/logo-cache.svg" alt="Caching" width="132" height="40" />
+          <img src="/heavy/assets/logo-routing.svg" alt="Routing" width="132" height="40" />
+          <img src="/heavy/assets/logo-observability.svg" alt="Observability" width="132" height="40" />
+          <img src="/heavy/assets/logo-analytics.svg" alt="Analytics" width="132" height="40" />
+        </section>
+
+        <section class="platform-grid" id="platform">
+          <article class="feature-card accent-a">
+            <h2>Unified edge routing</h2>
+            <p>
+              Send users to the fastest available origin, manage failover
+              policies, and smooth traffic spikes without changing application
+              code.
+            </p>
+          </article>
+          <article class="feature-card accent-b">
+            <h2>Programmable request handling</h2>
+            <p>
+              Customize headers, caching, and origin behavior at the request
+              edge with policy-aware execution hooks.
+            </p>
+          </article>
+          <article class="feature-card accent-c">
+            <h2>Security at the perimeter</h2>
+            <p>
+              Enforce bot checks, rate limits, and TLS termination close to
+              users while keeping backend services private.
+            </p>
+          </article>
+          <article class="feature-card accent-d">
+            <h2>Real-time observability</h2>
+            <p>
+              Inspect performance by region, endpoint, and cache status with
+              telemetry sampled directly from your delivery path.
+            </p>
+          </article>
+        </section>
+
+        <section class="network-section" id="network">
+          <div>
+            <p class="section-tag">Network map</p>
+            <h2>Designed to move traffic closer to users.</h2>
+            <p>
+              The network illustration, customer cards, and live metric strip
+              are all local assets to create a reproducible heavy workload
+              without any third-party dependencies.
+            </p>
+          </div>
+          <img
+            class="network-map"
+            src="/heavy/assets/network-map.svg"
+            alt="Abstract map connecting edge regions to origins."
+            width="1100"
+            height="520"
+          />
+        </section>
+
+        <section class="dashboard-section" id="customers">
+          <div class="section-heading">
+            <p class="section-tag">Performance snapshots</p>
+            <h2>Operations teams need more than average latency.</h2>
+          </div>
+          <div id="dashboard-cards" class="dashboard-cards"></div>
+        </section>
+
+        <section class="timeline-section" id="docs">
+          <div class="section-heading">
+            <p class="section-tag">Deployment timeline</p>
+            <h2>From staging to traffic cutover in four controlled steps.</h2>
+          </div>
+          <ol id="timeline-list" class="timeline-list"></ol>
+        </section>
+
+        <section class="pricing-section" id="pricing">
+          <div class="section-heading">
+            <p class="section-tag">Pricing</p>
+            <h2>Predictable plans for teams at different scales.</h2>
+          </div>
+          <div id="pricing-grid" class="pricing-grid"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+  </html>

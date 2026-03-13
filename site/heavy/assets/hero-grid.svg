@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2940"/>
+      <stop offset="100%" stop-color="#091422"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="540" rx="28" fill="url(#bg)"/>
+  <g stroke="rgba(153,204,255,0.12)">
+    <path d="M40 80h640"/>
+    <path d="M40 160h640"/>
+    <path d="M40 240h640"/>
+    <path d="M40 320h640"/>
+    <path d="M40 400h640"/>
+    <path d="M120 40v460"/>
+    <path d="M240 40v460"/>
+    <path d="M360 40v460"/>
+    <path d="M480 40v460"/>
+    <path d="M600 40v460"/>
+  </g>
+  <g>
+    <rect x="76" y="96" width="176" height="112" rx="18" fill="#11283c" stroke="#234764"/>
+    <rect x="288" y="68" width="140" height="88" rx="18" fill="#15324a" stroke="#2d597d"/>
+    <rect x="474" y="114" width="158" height="96" rx="18" fill="#11283c" stroke="#234764"/>
+    <rect x="126" y="274" width="164" height="100" rx="18" fill="#15324a" stroke="#2d597d"/>
+    <rect x="348" y="254" width="210" height="132" rx="22" fill="#11283c" stroke="#234764"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-width="6">
+    <path d="M252 150c28 0 35-42 72-42 46 0 37 64 78 64 33 0 46-30 72-30" stroke="#49a3ff"/>
+    <path d="M212 318c42 0 48-40 89-40 44 0 53 68 104 68 40 0 63-45 90-45" stroke="#63ead5"/>
+    <path d="M162 150c-20 40-20 104 10 140" stroke="#f0ba5e"/>
+  </g>
+  <g fill="#eaf6ff" font-family="Arial, sans-serif">
+    <text x="96" y="128" font-size="22">Edge ingress</text>
+    <text x="304" y="98" font-size="20">Policy engine</text>
+    <text x="494" y="144" font-size="20">Regional cache</text>
+    <text x="144" y="304" font-size="20">Analytics stream</text>
+    <text x="378" y="286" font-size="22">Origin coordination</text>
+  </g>
+</svg>

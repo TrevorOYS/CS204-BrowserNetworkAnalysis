@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Mirror production routes in staging",
+    "detail": "Import existing DNS and edge policies into a non-public environment to validate behavior before traffic changes."
+  },
+  {
+    "title": "Set secure transport defaults",
+    "detail": "Enable encrypted transport, inspect certificate coverage, and review request logs to confirm expected request paths."
+  },
+  {
+    "title": "Warm cache regions with synthetic requests",
+    "detail": "Prime frequently used assets so early users do not pay the full cold-start transfer penalty in every region."
+  },
+  {
+    "title": "Shift traffic gradually",
+    "detail": "Move real traffic in small percentages while tracking latency, origin load, and application error rates."
+  }
+]

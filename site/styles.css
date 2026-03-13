@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f4ed;
+  --paper: #fffdf8;
+  --ink: #1c242b;
+  --muted: #5d6871;
+  --line: #d2c6b3;
+  --accent: #c46a1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top, rgba(196, 106, 27, 0.18), transparent 28rem),
+    linear-gradient(180deg, var(--bg), #ede6d8);
+}
+
+.landing-shell {
+  width: min(72rem, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+}
+
+.landing-header {
+  max-width: 42rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.lede {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.fixture-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: var(--paper);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 1rem 2.5rem rgba(28, 36, 43, 0.08);
+}
+
+.fixture-card:hover,
+.fixture-card:focus-visible {
+  transform: translateY(-2px);
+  transition: transform 180ms ease;
+}
+
+.fixture-card h2 {
+  margin: 0.45rem 0 0.75rem;
+  font-size: 1.45rem;
+}
+
+.fixture-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.fixture-tag {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(196, 106, 27, 0.12);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+}

@@ -1,0 +1,134 @@
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card,
+.dashboard-cards article,
+.pricing-card,
+.timeline-list li {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: linear-gradient(180deg, rgba(18, 40, 60, 0.9), rgba(11, 25, 38, 0.96));
+}
+
+.feature-card h2,
+.dashboard-cards h3,
+.pricing-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.28rem;
+}
+
+.accent-a {
+  box-shadow: inset 0 0 0 1px rgba(73, 163, 255, 0.15);
+}
+
+.accent-b {
+  box-shadow: inset 0 0 0 1px rgba(99, 234, 213, 0.14);
+}
+
+.accent-c {
+  box-shadow: inset 0 0 0 1px rgba(255, 138, 107, 0.16);
+}
+
+.accent-d {
+  box-shadow: inset 0 0 0 1px rgba(240, 186, 94, 0.14);
+}
+
+.network-section,
+.dashboard-section,
+.timeline-section,
+.pricing-section {
+  margin-top: 3rem;
+}
+
+.network-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.network-map {
+  border: 1px solid var(--line);
+  border-radius: 1.8rem;
+  background: rgba(10, 24, 38, 0.95);
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.dashboard-cards p,
+.timeline-list p,
+.pricing-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.dashboard-metric {
+  display: block;
+  margin-top: 1rem;
+  color: var(--cyan);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.timeline-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  background: rgba(73, 163, 255, 0.15);
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.price {
+  margin: 1rem 0;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.price small {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.pricing-card ul {
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 980px) {
+  .platform-grid,
+  .dashboard-cards,
+  .timeline-list,
+  .pricing-grid,
+  .network-section {
+    grid-template-columns: 1fr;
+  }
+}

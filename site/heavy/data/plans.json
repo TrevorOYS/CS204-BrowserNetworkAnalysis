@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Starter",
+    "description": "For course projects and prototypes that need edge caching and a clear metrics baseline.",
+    "price": "$0",
+    "features": [
+      "1 active project",
+      "Shared traffic analytics",
+      "Static asset caching",
+      "Basic rules engine"
+    ],
+    "ctaStyle": "ghost",
+    "ctaLabel": "Use starter"
+  },
+  {
+    "name": "Team",
+    "description": "For small engineering groups that want stronger routing controls and richer observability.",
+    "price": "$79",
+    "features": [
+      "10 projects",
+      "Regional performance reports",
+      "Origin failover rules",
+      "Service-level alerts"
+    ],
+    "ctaStyle": "solid",
+    "ctaLabel": "Start team plan"
+  },
+  {
+    "name": "Scale",
+    "description": "For larger deployments coordinating multiple services, policies, and delivery regions.",
+    "price": "$299",
+    "features": [
+      "Unlimited projects",
+      "Advanced policy controls",
+      "Dedicated analytics retention",
+      "Priority support"
+    ],
+    "ctaStyle": "ghost",
+    "ctaLabel": "Talk to sales"
+  }
+]
