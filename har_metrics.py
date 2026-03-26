@@ -37,7 +37,7 @@ def load_metrics(path: Path):
     creator = log.get("creator", {}).get("name", "")
     if "WebKit" in creator and onload and oncontent:
         # Both values are absolute from same reference; delta is the true PLT
-        onload = oncontent - onload
+        onload = onload - oncontent
         oncontent = None  # no longer meaningful independently
 
     req_count = len(entries)
