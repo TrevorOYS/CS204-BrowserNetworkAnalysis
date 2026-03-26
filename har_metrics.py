@@ -32,6 +32,13 @@ def load_metrics(path: Path):
         pt = pages[0].get("pageTimings", {})
         onload = pt.get("onLoad")
         oncontent = pt.get("onContentLoad")
+    
+    # Detect Safari HAR (creator name contains "WebKit")
+    creator = log.get("creator", {}).get("name", "")
+    if "WebKit" in creator and onload and oncontent:
+        # Both values are absolute from same reference; delta is the true PLT
+        onload = oncontent - onload
+        oncontent = None  # no longer meaningful independently
 
     req_count = len(entries)
     err_count = 0
