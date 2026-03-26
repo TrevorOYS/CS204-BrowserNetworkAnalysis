@@ -1,16 +1,1 @@
 file,requests,errors,error_rate,dns_ms,tcp_tls_ms,ttfb_ms,plt_ms,oncontent_ms,avg_fetch_ms,total_bytes,throughput_bps
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-07].har,20,1,0.05,0.0,0,57.95,202,83,57.95,14388,569821.7821782178
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-15].har,20,1,0.05,0.0,0,74.75,244,113,74.75,14388,471737.7049180328
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-21].har,20,1,0.05,0.0,0,96.95,240,83,96.95,14388,479600.0
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-26].har,20,1,0.05,0.0,0,87.95,235,83,87.95,14388,489804.25531914894
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-32].har,20,1,0.05,0.0,0,100.4,336,185,100.4,14388,342571.4285714285
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-38].har,20,1,0.05,0.0,0,68.25,304,149,68.35,14388,378631.5789473684
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-44].har,20,1,0.05,0.0,0,91.7,240,91,91.7,14388,479600.0
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-49].har,20,1,0.05,0.0,0,147.65,423,200,147.65,14388,272113.475177305
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-47-57].har,20,1,0.05,0.0,0,64.1,256,152,64.1,14388,449625.0
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-48-03].har,20,1,0.05,0.0,0,88.9,251,112,88.9,14388,458581.6733067729
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-48-08].har,20,1,0.05,0.0,0,98.55,256,93,98.55,14388,449625.0
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-48-14].har,20,1,0.05,0.0,0,110.7,313,90,110.7,14388,367744.4089456869
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-48-20].har,20,1,0.05,0.0,0,80.9,255,112,80.9,14388,451388.23529411765
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-48-26].har,20,1,0.05,0.0,0,90.7,350,197,90.7,14388,328868.5714285715
-pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 18-48-32].har,20,1,0.05,0.0,0,96.2,291,116,96.2,14388,395546.3917525773
