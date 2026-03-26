@@ -1,0 +1,16 @@
+file,requests,errors,error_rate,dns_ms,tcp_tls_ms,ttfb_ms,plt_ms,oncontent_ms,avg_fetch_ms,total_bytes,throughput_bps
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-41-56].har,20,1,0.05,0.0,0,2622.95,7053,3419,2940.75,14388,16319.863887707359
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-42-17].har,20,1,0.05,0.0,0,3236.85,7752,3485,3538.55,14388,14848.29721362229
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-42-31].har,20,1,0.05,0.0,0,2707.15,5710,1943,3053.55,14388,20158.31873905429
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-42-47].har,20,1,0.05,0.0,0,2596.75,6210,3160,2924.15,14388,18535.26570048309
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-43-02].har,20,0,0.0,0.0,0,2685.1,6583,3416,3124.8,12163,14781.10284065016
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-44-05].har,20,1,0.05,0.0,0,3521.25,8022,3439,3855.65,14388,14348.541510845176
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-44-21].har,20,0,0.0,0.0,0,3806.5,8628,3611,4117.15,12163,11277.700509967548
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-44-37].har,20,1,0.05,0.0,0,3281.2,7431,3348,3619.55,14388,15489.705288655632
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-44-51].har,20,0,0.0,0.0,0,3557.625,7576,3443,3137.0,12163,12843.717001055968
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-45-06].har,20,0,0.0,0.0,0,2823.95,6468,2985,3236.35,12747,15766.233766233767
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-45-22].har,20,1,0.05,0.0,0,3005.75,5941,2491,3248.05,14388,19374.516074734893
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-45-36].har,20,0,0.0,0.0,0,2766.85,6837,3170,3085.9,13468,15758.958607576424
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-45-55].har,20,1,0.05,0.0,0,2808.6,6780,3230,3139.5,14388,16976.991150442478
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-46-09].har,20,0,0.0,0.0,0,3000.5,6362,2861,3316.4,12163,15294.561458660799
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-46-25].har,20,1,0.05,0.0,0,2926.4,7210,3594,3249.2,14388,15964.493758668516

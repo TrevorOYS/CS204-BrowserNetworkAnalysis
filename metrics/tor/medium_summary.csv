@@ -1,0 +1,16 @@
+group,requests_mean,errors_mean,error_rate_mean,dns_ms_mean,tcp_tls_ms_mean,ttfb_ms_mean,plt_ms_mean,oncontent_ms_mean,avg_fetch_ms_mean,total_bytes_mean,throughput_bps_mean,requests_stddev,errors_stddev,error_rate_stddev,dns_ms_stddev,tcp_tls_ms_stddev,ttfb_ms_stddev,plt_ms_stddev,oncontent_ms_stddev,avg_fetch_ms_stddev,total_bytes_stddev,throughput_bps_stddev
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-35-38].har,4.0,1.0,0.25,0.0,0.0,1210.5,2505.0,1272.0,1210.5,6467.0,20653.09381237525,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-35-51].har,4.0,1.0,0.25,0.0,0.0,1071.75,2270.0,1136.0,1071.75,6467.0,22791.189427312776,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-35-59].har,4.0,0.0,0.0,0.0,0.0,1204.5,2541.0,1274.0,1204.5,3984.0,12543.093270365998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-36-05].har,4.0,0.0,0.0,0.0,0.0,1013.0,2071.0,1121.0,1013.0,3984.0,15389.666827619507,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-36-20].har,4.0,1.0,0.25,0.0,0.0,1484.75,2957.0,1607.0,1484.75,6467.0,17496.11092323301,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-36-27].har,4.0,0.0,0.0,0.0,0.0,1162.5,2369.0,1202.0,1162.5,6188.0,20896.580835795692,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-36-33].har,4.0,0.0,0.0,0.0,0.0,1009.0,2221.0,1171.0,1009.0,3984.0,14350.292660963529,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-36-45].har,4.0,1.0,0.25,0.0,0.0,1035.25,2421.0,1338.0,1035.25,6467.0,21369.681949607602,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-36-54].har,4.0,1.0,0.25,0.0,0.0,1286.75,2689.0,1223.0,1286.75,6467.0,19239.86612123466,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-37-02].har,4.0,1.0,0.25,0.0,0.0,1255.25,2669.0,1502.0,1255.25,6467.0,19384.038965904834,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-37-10].har,4.0,0.0,0.0,0.0,0.0,1126.5,2248.0,997.0,1127.0,3984.0,14177.935943060496,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-37-19].har,4.0,1.0,0.25,0.0,0.0,1086.25,2386.0,1336.0,1086.25,6467.0,21683.151718357083,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-37-36].har,4.0,1.0,0.25,0.0,0.0,1398.5,3093.0,1626.0,1398.5,6467.0,16726.80245716133,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-37-45].har,4.0,1.0,0.25,0.0,0.0,1264.0,2792.0,1458.0,1264.0,6467.0,18530.08595988539,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pomological-subocean-anastacia.ngrok-free.dev_Archive [26-03-20 23-37-53].har,3.0,0.0,0.0,0.0,0.0,1475.3333333333333,3188.0,1538.0,1475.3333333333333,3984.0,9997.490589711417,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
